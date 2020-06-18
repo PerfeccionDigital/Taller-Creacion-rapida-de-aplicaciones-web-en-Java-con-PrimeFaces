@@ -1,0 +1,119 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.perfecciondigital</groupId>
+	<artifactId>taller-primefaces</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>taller-primefaces</name>
+	<description>Taller de Primefaces</description>
+
+	<repositories>
+		<repository>
+			<id>prime-repo</id>
+			<name>PrimeFaces Maven Repository</name>
+			<url>http://repository.primefaces.org</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+
+	<properties>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+	</properties>
+
+	<dependencies>
+
+		<!-- <dependency> -->
+		<!-- <groupId>org.glassfish</groupId> -->
+		<!-- <artifactId>javax.faces</artifactId> -->
+		<!-- <version>2.4.0</version> -->
+		<!-- </dependency> -->
+
+		<!--Mojarra is a implementation of JSF -->
+		<dependency>
+			<groupId>org.glassfish</groupId>
+			<artifactId>jakarta.faces</artifactId>
+			<version>2.3.14</version>
+		</dependency>
+
+		<!-- Well is the reference implementation of CDI for JEE -->
+		<dependency>
+			<groupId>org.jboss.weld.servlet</groupId>
+			<artifactId>weld-servlet-shaded</artifactId>
+			<version>3.1.4.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>8.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.primefaces.extensions</groupId>
+			<artifactId>primefaces-extensions</artifactId>
+			<version>8.0.2</version>
+		</dependency>
+
+		<!-- for more free Primefaces themes -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.primefaces.themes</groupId> -->
+		<!-- <artifactId>all-themes</artifactId> -->
+		<!-- <version>1.0.10</version> -->
+		<!-- </dependency> -->
+
+		<!--for QR -->
+		<dependency>
+			<groupId>net.glxn</groupId>
+			<artifactId>qrgen</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+		<!--for Barcode -->
+		<dependency>
+			<groupId>net.sf.barcode4j</groupId>
+			<artifactId>barcode4j-light</artifactId>
+			<version>2.1</version>
+		</dependency>
+
+		<!--for Text Editor -->
+		<dependency>
+			<groupId>com.googlecode.owasp-java-html-sanitizer</groupId>
+			<artifactId>owasp-java-html-sanitizer</artifactId>
+			<version>20191001.1</version>
+		</dependency>
+
+		<!-- for CKEditor on Primefaces Extensions -->
+		<dependency>
+			<groupId>org.primefaces.extensions</groupId>
+			<artifactId>resources-ckeditor</artifactId>
+			<version>8.0.2</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- for generate code automatically like getters, setters, etc -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.12</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

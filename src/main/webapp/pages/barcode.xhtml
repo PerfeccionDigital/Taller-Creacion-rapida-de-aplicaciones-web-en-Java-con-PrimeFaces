@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:p="http://primefaces.org/ui"
+	  >
+<h:head>
+	<title>Componentes Primefaces</title>
+	<h:outputStylesheet name="css/style.css" />
+	<style type="text/css">
+	    body .ui-panelgrid .ui-panelgrid-cell:last-child {
+	        background-color: #ffffff;
+	    }
+	</style>
+</h:head>
+<h:body>
+<h1>Barcode</h1>
+<p:panelGrid columns="2" style="back" >
+
+	<h:outputText value="Codabar" />
+    <p:barcode value="0123456789" type="codabar" width="200"/>
+    
+    <h:outputText value="DataMatrix" />
+    <p:barcode value="0123456789" type="datamatrix" width="200" />
+    
+    <h:outputText value="QR" />
+    <p:barcode value="0123456789" type="qr" width="200"/>
+
+</p:panelGrid>
+</h:body>
+</html>

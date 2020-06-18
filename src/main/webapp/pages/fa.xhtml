@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:p="http://primefaces.org/ui"
+	  >
+<h:head>
+	<title>Componentes Primefaces</title>
+	<h:outputStylesheet name="css/style.css" />
+	<style type="text/css">
+	body{
+		font-size: 20px;	
+	}
+	
+    i {
+        margin-right: 10px;
+    }
+ 
+    .ui-grid-col-3 {
+        padding: 4px 10px;
+    }
+	</style>
+</h:head>
+<h:body>
+	<h1>FontAwesome</h1>
+	<p:commandButton value="Edit" icon="fa fa-fw fa-edit" type="button"/>
+	<p:commandButton value="Remove" icon="fa fa-fw fa-remove" type="button"/>
+	<p:commandButton value="Download" icon="fa fa-fw fa-download" type="button"/>
+	 
+	<h3>Menu</h3>
+	<p:menu>
+	    <p:submenu label="Document">
+	        <p:menuitem value="New" url="#" icon="fa fa-plus" />
+	        <p:menuitem value="Refresh" url="#" icon="fa fa-refresh"/>
+	    </p:submenu>
+	    <p:submenu label="Navigations">
+	        <p:menuitem value="Home" url="http://www.primefaces.org" icon="fa fa-home"/>
+	        <p:menuitem value="User" url="#" icon="fa fa-user"/>
+	    </p:submenu>
+	</p:menu>
+
+	<div class="ui-grid ui-grid-responsive">
+	    <div class="ui-grid-row">
+	        <div class="ui-grid-col-3"><i class="fa fa-fw fa-bed"></i>fa-bed</div>
+	        <div class="ui-grid-col-3"><i class="fa fa-fw fa-buysellads"></i>fa-buysellads</div>
+	        <div class="ui-grid-col-3"><i class="fa fa-fw fa-cart-arrow-down"></i>fa-cart-arrow-down</div>
+	        <div class="ui-grid-col-3"><i class="fa fa-fw fa-cart-plus"></i>fa-cart-plus</div>
+	    </div>
+	</div>
+</h:body>
+</html>

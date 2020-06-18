@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+
+	<context-param>
+		<param-name>javax.faces.PROJECT_STAGE</param-name>
+		<param-value>Development</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>primefaces.THEME</param-name>
+		<param-value>luna-blue</param-value>
+	</context-param>
+	
+	<!-- for FontAwesome -->
+	<context-param>
+		<param-name>primefaces.FONT_AWESOME</param-name>
+		<param-value>true</param-value>
+	</context-param>
+
+	<!-- for keys reCaptcha -->
+	<!-- for create keys reCaptcha: https://www.google.com/recaptcha/admin/create  -->
+	<context-param>
+		<param-name>primefaces.PRIVATE_CAPTCHA_KEY</param-name>
+		<param-value>6Lf4pqQZAAAAAIZTtWgh1DKG4vytVvpiO7GIBCV0</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>primefaces.PUBLIC_CAPTCHA_KEY</param-name>
+		<param-value>6Lf4pqQZAAAAAPCEq0oqc7__dOiJnxAk4BeRUkcw</param-value>
+	</context-param>
+	
+	<!-- Resolver warning mimeType woff2 -->
+	<!-- 	jun 14, 2020 2:52:07 PM com.sun.faces.context.ExternalContextImpl getMimeType -->
+	<!-- 	ADVERTENCIA: JSF1091: no se ha encontrado ningún tipo MIME para el archivo fonts/open-sans-v13-latin-regular.woff2.  Para resolverlo, agregue una asignación de tipo MIME al archivo web.xml de la aplicación. -->
+	<mime-mapping>
+		<extension>woff2</extension>
+		<mime-type>application/font-woff2</mime-type>
+	</mime-mapping>
+
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>pages/index.xhtml</welcome-file>
+	</welcome-file-list>
+
+</web-app>
